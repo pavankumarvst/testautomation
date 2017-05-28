@@ -18,6 +18,6 @@ public class Test_Login extends BaseSuite{
 		PageObject po = new PageObject();
 		System.out.println("In Test");
 		po.login();
-		
+		System.out.println("After Login");		
 	}
 }
