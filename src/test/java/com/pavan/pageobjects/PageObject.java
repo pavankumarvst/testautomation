@@ -20,16 +20,16 @@ public class PageObject {
 //	WebElement PasswordTxtField = driver.findElement(By.id("Passwd"));
 //	WebElement SignInBtn = driver.findElement(By.id("signIn"));
 	
-	@FindBy(id = "Email")
+	@FindBy(id = "identifierId")
 	public WebElement loginTxtField;
 	
-	@FindBy(id = "next")
+	@FindBy(id = "identifierNext")
 	public WebElement NextBtn;
 	
-	@FindBy(id = "Passwd")
+	@FindBy(name = "password")
 	public WebElement PasswordTxtField;
 	
-	@FindBy(id = "signIn")
+	@FindBy(id = "passwordNext")
 	public WebElement SignInBtn;
 	
 	
@@ -42,6 +42,7 @@ public class PageObject {
 		BaseClass.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		PasswordTxtField.sendKeys("githubuser");
 		SignInBtn.click();
+		
 	}
 	
 
